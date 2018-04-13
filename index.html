@@ -11,6 +11,8 @@
       <h1>{{name}}</h1>
       <a v-bind:href="website">WNA Foundation</a><br>
       <input type="text" name="" v-bind:value="job">
+      <!-- insering anchor tag inside P tag -->
+      <p v-html="websiteTag"></p>
     </div>
     <script src="app.js"></script>
   </body>
