@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Lesson 1</title>
-    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
   <body>
     <div id="app">
       <h1>Age: {{age}}</h1>
-      <button type="button" v-on:click="addYear(1)">Add a year</button>
+      <!-- adding 'once' event modifier -->
+      <button type="button" v-on:click.once="addYear(1)">Add a year</button>
       <button type="button" v-on:click="subtractYear(1)">Subtract a year</button>
 
       <button type="button" v-on:dblclick="addYear(10)">Add 10 years</button>
       <button type="button" v-on:dblclick="subtractYear(10)">Subtract 10 years</button>
+      <br><br>
 
-      <div v-on:mousemove="updateXY" id="canvas" style="width: 600px;padding: 200px 0px;text-align: center;border: 1px solid black;">
-        <p>({{x}}, {{y}})</p>
-      </div>
+      <!-- adding 'prevent' event modifier to prevent default behavior... -->
+      <!-- we can use 'v-on' in place of '@'... -->
+      <a v-on:click.prevent="click" href="http://wnafoundation.org/">WNA Foundation</a>
     </div>
     <script src="app.js"></script>
   </body>
