@@ -3,16 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Lesson 1</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
   <body>
     <div id="app">
-      <h1>{{ greet('Afternoon') }}</h1>
-      <h1>{{name}}</h1>
-      <a v-bind:href="website">WNA Foundation</a><br>
-      <input type="text" name="" v-bind:value="job">
-      <!-- insering anchor tag inside P tag -->
-      <p v-html="websiteTag"></p>
+      <h1>Age: {{age}}</h1>
+      <button type="button" v-on:click="addYear(1)">Add a year</button>
+      <button type="button" v-on:click="subtractYear(1)">Subtract a year</button>
+
+      <button type="button" v-on:dblclick="addYear(10)">Add 10 years</button>
+      <button type="button" v-on:dblclick="subtractYear(10)">Subtract 10 years</button>
+
+      <div v-on:mousemove="updateXY" id="canvas" style="width: 600px;padding: 200px 0px;text-align: center;border: 1px solid black;">
+        <p>({{x}}, {{y}})</p>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
