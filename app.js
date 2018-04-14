@@ -1,31 +1,34 @@
+// This is component named 'greeting' which is reused in both vue instances...
+Vue.component('greeting', {
+  template: '<p>Hey there, I am <strong>{{name}}</strong> <button v-on:click="changeName">Change Name</button></p>',
+  data: function() {
+    return {
+      name: 'Pratik'
+    }
+  },
+  methods: {
+    changeName: function() {
+      this.name = 'Samiul Alim Pratik';
+    }
+  }
+});
+
 var one = new Vue({
   el: '#vue-app-one',
   data: {
-    title: 'Vue App One'
+
   },
-  computed: {
-    greet: function() {
-      return 'Greetings from Vue App One';
-    }
+  methods: {
+
   }
 });
 
 var two = new Vue({
   el: '#vue-app-two',
   data: {
-    title: 'Vue App Two'
+
   },
   methods: {
-    changeTitle: function() {
-      one.title = 'Title Changed';
-    }
-  },
-  computed: {
-    greet: function() {
-      return 'Greeting from Vue App Two';
-    }
+
   }
 });
-
-
-two.title = 'Title Changed from outside';

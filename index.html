@@ -8,14 +8,12 @@
   </head>
   <body>
     <div id="vue-app-one">
-      <h1>{{title}}</h1>
-      <h2>{{greet}}</h2>
+      <h1>Vue App One</h1>
+      <greeting></greeting>
     </div>
     <div id="vue-app-two">
-      <h1>{{title}}</h1>
-      <h2>{{greet}}</h2>
-      <!-- Changing vue app two title from vue app one -->
-      <button type="button" v-on:click="changeTitle()">Change Vue App One Title From Vue App Two</button>
+      <h1>Vue App Two</h1>
+      <greeting></greeting>
     </div>
 
     <script src="app.js"></script>
