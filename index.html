@@ -7,30 +7,17 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
   <body>
-    <div id="app">
-      <h1>Simple v-for to loop through arrays</h1>
-      <ul>
-        <li v-for="(character,index) in characters">{{index+1}}. {{character}}</li>
-      </ul>
-      <ul>
-        <li v-for="(ninja, index) in ninjas">{{index+1}}. {{ninja.name}} - {{ninja.age}}</li>
-      </ul>
-
-      <h1>template tag</h1>
-      <!-- template enables to repeat the inner HTMLs -->
-      <template v-for="(ninja,index) in ninjas">
-        <h3>{{index}}. {{ninja.name}}</h3>
-        <p>{{ninja.age}}</p>
-      </template>
-
-      <h1>cycling through each key-value pair of a object</h1>
-      <template v-for="ninja in ninjas">
-        <!-- looping through key-value pairs of each object of the array -->
-        <div v-for="(val, key) in ninja">
-          <p>{{key}} - {{val}}</p>
-        </div>
-      </template>
+    <div id="vue-app-one">
+      <h1>{{title}}</h1>
+      <h2>{{greet}}</h2>
     </div>
+    <div id="vue-app-two">
+      <h1>{{title}}</h1>
+      <h2>{{greet}}</h2>
+      <!-- Changing vue app two title from vue app one -->
+      <button type="button" v-on:click="changeTitle()">Change Vue App One Title From Vue App Two</button>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
