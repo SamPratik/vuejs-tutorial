@@ -10,11 +10,10 @@
     <div id="app">
       <button type="button" v-on:click="error = !error">Toggle Error</button>
       <button type="button" v-on:click="success = !success">Toggle Success</button>
-      <!-- v-if removes DOM from document -->
-      <!-- if error is false this DOM will be removed -->
-      <p v-if="error">There is an error</p>
-      <!-- if error is true this condition will not be checked -->
-      <p v-else-if="success">Whoooo, success!</p>
+      <!-- if error is false style="display:none" will be added to this DOM -->
+      <p v-show="error">There is an error</p>
+      <!-- if success is false style="display:none" will be added to this DOM -->
+      <p v-show="success">Whoooo, success!</p>
     </div>
     <script src="app.js"></script>
   </body>
