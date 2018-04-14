@@ -9,11 +9,13 @@
     <div id="app">
         <form class="">
             <label>Name:</label>
-            <!-- This will call the logName function after pressing enter -->
-            <input type="text" v-on:keyup.enter="logName"><br>
+            <!-- updates the name property as user types the name... -->
+            <input type="text" v-model="name"><br>
+            {{name}}<br><br>
+            <!-- updates the age property as user types the name... -->
             <label>Age:</label>
-            <!-- This will call the logAge function after pressing alt+enter -->
-            <input type="text" v-on:keyup.alt.enter="logAge">
+            <input type="text" v-model="age"><br>
+            {{age}}
         </form>
     </div>
     <script src="app.js"></script>
